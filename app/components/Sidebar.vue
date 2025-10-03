@@ -1,19 +1,25 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import type Post from "../../types/post";
 
 const { isOpen } = toggleSidebar();
 
-const delay = (ms: number) => new Promise<void>(res => setTimeout(res, ms));
+// const delay = (ms: number) => new Promise<void>(res => setTimeout(res, ms));
+
+// const { data: posts, status, refresh } = await useFetch<Post[]>("https://json-placeholder.mock.beeceptor.com/posts",
+// 	{
+// 		server: false,
+// 		onRequest: async () => {
+// 			await delay(4000);
+// 		},
+// 	});
 
 const { data: posts, status, refresh } = await useFetch<Post[]>("https://json-placeholder.mock.beeceptor.com/posts",
 	{
 		server: false,
 		onRequest: async () => {
-			await delay(4000);
+			await new Promise(resolve => setTimeout(resolve, 4000));
 		},
 	});
-
-const pending = computed(() => status.value === "pending");
 </script>
 
 <template>
@@ -26,7 +32,7 @@ const pending = computed(() => status.value === "pending");
 				Refresh posts
 			</Button>
 			<Loader
-				v-if="pending"
+				v-if="status === 'pending'"
 			/>
 			<div
 				v-for="post in posts"
