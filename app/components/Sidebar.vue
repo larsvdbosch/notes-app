@@ -5,14 +5,13 @@ const { isOpen } = toggleSidebar();
 
 const delay = (ms: number) => new Promise<void>(res => setTimeout(res, ms));
 
-const { data: posts, status } = await useAsyncData<Post[]>(
-	"posts",
-	async () => {
-		await delay(4000);
-		return $fetch("https://json-placeholder.mock.beeceptor.com/posts");
-	},
-	{ server: false },
-);
+const { data: posts, status } = await useFetch<Post[]>("https://json-placeholder.mock.beeceptor.com/posts",
+	{
+		server: false,
+		onRequest: async () => {
+			await delay(4000);
+		},
+	});
 
 const pending = computed(() => status.value === "pending");
 </script>
@@ -32,7 +31,7 @@ const pending = computed(() => status.value === "pending");
 				v-else
 				:key="post.id"
 			>
-				<NuxtLink to="/notes">
+				<NuxtLink to="/">
 					<article class="flex flex-col gap-2 bg-[#FFD8E1] hover:bg-[#FFCFDA] border border-[#F8A1B4] transition duration-150 ease-in-out text-[#872C40] p-4 rounded-lg w-full">
 						<h1 class="font-semibold text-2xl line-clamp-1">
 							{{ post.title }}

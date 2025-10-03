@@ -9,7 +9,7 @@ const { toggle } = toggleSidebar();
 			class="p-4 flex justify-between items-center w-full"
 		>
 			<NuxtLink
-				to="/notes"
+				to="/"
 			>
 				<NuxtImg
 					src="/assets/svg/logo.svg"
