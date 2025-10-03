@@ -7,6 +7,14 @@ export default defineNuxtConfig({
 		"@nuxt/eslint",
 	],
 	devtools: { enabled: true },
+	app: {
+		head: {
+			title: "MindPad | Take notes", // default fallback title
+			htmlAttrs: {
+				lang: "en",
+			},
+		},
+	},
 	compatibilityDate: "2025-07-15",
 	eslint: {
 		config: {
