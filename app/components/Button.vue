@@ -5,7 +5,7 @@
 		>
 			<NuxtLink to="/">
 				<NuxtImg
-					src="/assets/svg/plus.svg"
+					src="/assets/svg/refresh.svg"
 					alt="Logo"
 					width="16"
 					height="16"

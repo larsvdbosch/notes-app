@@ -5,7 +5,7 @@ const { isOpen } = toggleSidebar();
 
 const delay = (ms: number) => new Promise<void>(res => setTimeout(res, ms));
 
-const { data: posts, status } = await useFetch<Post[]>("https://json-placeholder.mock.beeceptor.com/posts",
+const { data: posts, status, refresh } = await useFetch<Post[]>("https://json-placeholder.mock.beeceptor.com/posts",
 	{
 		server: false,
 		onRequest: async () => {
@@ -22,7 +22,9 @@ const pending = computed(() => status.value === "pending");
 		:class="{ '!ml-0': isOpen }"
 	>
 		<div class="flex flex-col gap-4 w-full">
-			<Button>Add note</Button>
+			<Button @click="refresh">
+				Refresh posts
+			</Button>
 			<Loader
 				v-if="pending"
 			/>
