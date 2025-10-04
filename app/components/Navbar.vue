@@ -36,7 +36,7 @@ const { toggle } = toggleSidebar();
 			</div>
 		</div>
 		<div
-			class="bg-white  fixed top-16 h-12 z-50 w-full border-[#F8F8F8] border-b p-4 flex justify-between items-center"
+			class="bg-white fixed top-16 h-12 z-50 w-full border-[#F8F8F8] border-b p-4 flex justify-between items-center"
 		>
 			<button
 				class="flex lg:hidden gap-1 items-center text-sm text-[#0C0D0E]"
@@ -44,12 +44,13 @@ const { toggle } = toggleSidebar();
 			>
 				<NuxtImg
 					src="/assets/svg/menu.svg"
-					alt="menu icon"
+					alt="menu-icon"
 					width="24"
 					height="24"
 				/>
 				<span>Menu</span>
 			</button>
+			<FilterDropdown />
 		</div>
 	</header>
 </template>

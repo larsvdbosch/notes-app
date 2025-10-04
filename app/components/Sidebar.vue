@@ -13,7 +13,7 @@ const { isOpen } = toggleSidebar();
 // 		},
 // 	});
 
-const { data: posts, status, refresh } = await useFetch<Post[]>("https://json-placeholder.mock.beeceptor.com/posts",
+const { data: posts, status, refresh } = await useLazyFetch<Post[]>("https://json-placeholder.mock.beeceptor.com/posts",
 	{
 		server: false,
 		onRequest: async () => {
@@ -29,7 +29,7 @@ const { data: posts, status, refresh } = await useFetch<Post[]>("https://json-pl
 	>
 		<div class="flex flex-col gap-4 w-full">
 			<Button @click="refresh">
-				Refresh posts
+				Refresh notes
 			</Button>
 			<Loader
 				v-if="status === 'pending'"
