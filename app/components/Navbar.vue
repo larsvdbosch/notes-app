@@ -50,7 +50,7 @@ const { toggle } = toggleSidebar();
 				/>
 				<span>Menu</span>
 			</button>
-			<FilterDropdown />
+			<FilterDropdown filter="Clear all" />
 		</div>
 	</header>
 </template>
