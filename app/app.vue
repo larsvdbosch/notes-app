@@ -6,9 +6,3 @@
 		</NuxtLayout>
 	</div>
 </template>
-
-<style>
-:root {
-  --pattern-fg: #FFEFF3;
-}
-</style>
