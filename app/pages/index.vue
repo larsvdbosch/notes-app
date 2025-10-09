@@ -8,14 +8,14 @@
 				maxlength="30"
 				wrap="hard"
 				rows="1"
-				@keyup.enter="addNote"
+				@keydown.enter="addNote"
 			/>
 			<textarea
 				v-model="noteContent"
 				placeholder="Morgen ga ik naar school en daarna..."
 				class="resize-none bg-transparent border-none outline-none font-normal leading-6"
 				rows="30"
-				@keyup.enter="addNote"
+				@keydown.enter="addNote"
 			/>
 		</div>
 	</div>

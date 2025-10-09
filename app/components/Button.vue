@@ -1,7 +1,7 @@
 <template>
 	<NuxtLink to="/">
 		<button
-			class="flex gap-1 items-center justify-center w-full bg-secondary border-secondary-border border hover:bg-[#00d07a] transition duration-150 ease-in-out font-medium text-secondary-dark px-4 py-2 rounded-lg"
+			class="flex gap-1 items-center justify-center w-full bg-secondary border-secondary-border border hover:bg-[#f00094] transition-colors duration-[.25s] font-medium text-secondary-dark px-4 py-2 rounded-lg"
 		>
 			<NuxtImg
 				src="/assets/svg/refresh.svg"

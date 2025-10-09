@@ -4,11 +4,11 @@
 		@click="toggleDropdown"
 	>
 		<button
-			class="flex items-center cursor-default bg-white hover:bg-[#F8F8F8] border border-[#F0F0F0] transition duration-150 ease-in-out font-normal px-2 py-1 rounded-[4px] gap-1"
+			class="flex items-center cursor-default bg-white hover:bg-[#F8F8F8] border border-[#F0F0F0] transition-colors duration-[.15s] font-normal px-2 py-1 rounded-[4px] gap-1"
 		>
 			<NuxtImg
 				src="/assets/svg/menu.svg"
-				alt="filter icon"
+				alt="filter-icon"
 				width="16"
 				height="16"
 			/>
@@ -16,7 +16,7 @@
 		</button>
 		<button
 			:class="{ hidden: !isOpen }"
-			class="absolute flex mt-1 items-center cursor-default bg-white hover:bg-[#F8F8F8] border border-[#F0F0F0] transition duration-150 ease-in-out font-normal px-2 py-1 rounded-[4px] gap-1"
+			class="absolute flex mt-1 items-center cursor-default bg-white hover:bg-[#F8F8F8] border border-[#F0F0F0] transition-colors duration-[.15s] font-normal px-2 py-1 rounded-[4px] gap-1"
 			@click="removeNotes"
 		>
 			<span>{{ props.filter }}</span>

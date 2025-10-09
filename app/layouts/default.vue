@@ -1,7 +1,8 @@
 <template>
 	<div>
+		<Banner />
 		<Navbar />
-		<div class="pt-32">
+		<div class="pt-40">
 			<Sidebar />
 			<main>
 				<slot />

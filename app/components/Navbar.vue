@@ -4,7 +4,7 @@ const { toggle } = toggleSidebar();
 </script>
 
 <template>
-	<section class="bg-white flex fixed top-0 h-16 z-50 w-full border-border-color border-b">
+	<section class="bg-white flex fixed top-8 h-16 z-50 w-full border-border-color border-b">
 		<header
 			class="p-4 flex justify-between items-center w-full"
 		>
@@ -26,19 +26,19 @@ const { toggle } = toggleSidebar();
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<span class="hover:text-gray-600 transition-colors duration-300 ease-in-out">Github</span>
+					<span class="hover:text-gray-600 transition-colors duration-[.25s]">Github</span>
 				</a>
 				<a
 					href="https://larsvandenbosch.netlify.app/"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<span class="hover:text-gray-600 transition-colors duration-300 ease-in-out">My portfolio</span>
+					<span class="hover:text-gray-600 transition-colors duration-[.25s]">My portfolio</span>
 				</a>
 			</div>
 		</header>
 		<section
-			class="bg-white fixed top-16 h-16 z-50 w-full border-border-color border-b p-4"
+			class="bg-white fixed top-24 h-16 z-50 w-full border-border-color border-b p-4"
 		>
 			<header class="flex justify-between items-center">
 				<button
@@ -48,8 +48,8 @@ const { toggle } = toggleSidebar();
 					<NuxtImg
 						src="/assets/svg/menu.svg"
 						alt="menu-icon"
-						width="24"
-						height="24"
+						width="16"
+						height="16"
 					/>
 					<span>Menu</span>
 				</button>
