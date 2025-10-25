@@ -14,6 +14,8 @@ export const useNotes = () => {
 			content: noteContent.value,
 			date: new Date().toLocaleDateString("nl-NL", { year: "numeric", month: "long", day: "numeric" }),
 		});
+		noteTitle.value = "";
+		noteContent.value = "";
 	};
 
 	const removeNotes = () => {

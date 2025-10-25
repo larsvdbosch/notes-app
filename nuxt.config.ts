@@ -5,11 +5,12 @@ export default defineNuxtConfig({
 		"@nuxt/image",
 		"@nuxtjs/tailwindcss",
 		"@nuxt/eslint",
+		"@nuxtjs/supabase",
 	],
 	devtools: { enabled: true },
 	app: {
 		head: {
-			title: "MindPad | Take notes", // default fallback title
+			title: "Notably | Take notes", // default fallback title
 			htmlAttrs: {
 				lang: "en",
 			},
@@ -35,5 +36,8 @@ export default defineNuxtConfig({
 				weights: [400, 500, 600, 700],
 			},
 		],
+	},
+	supabase: {
+		redirect: false,
 	},
 });
