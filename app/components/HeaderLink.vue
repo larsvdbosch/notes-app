@@ -3,7 +3,7 @@
 		:to="to"
 		class="flex p-2 rounded-lg hover:bg-gray-100 transition-colors duration-[.25s] ease-out items-center"
 	>
-		<span class="text-sm text-black font-normal">{{ name }}</span>
+		<span class="text-base text-black font-normal">{{ name }}</span>
 	</NuxtLink>
 </template>
 
