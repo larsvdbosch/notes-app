@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-sky-50 w-full">
+	<div class="bg-blue-50 w-full">
 		<div class="grid lg:grid-cols-2">
 			<NuxtImg
 				src="/assets/img/login.png"
@@ -33,7 +33,7 @@
 								type="email"
 								required
 								placeholder="me@mail.com"
-								class="bg-white px-4 py-3 rounded-lg outline-dashed outline-gray-200 focus:outline-sky-400 focus:outline-offset-2"
+								class="bg-white px-4 py-3 rounded-lg outline-dashed outline-gray-200 focus:outline-blue-400 focus:outline-offset-2"
 							>
 							<span class="tagline">{{ successMessage }}</span>
 						</div>
@@ -43,7 +43,7 @@
 							type="text"
 							placeholder="welkom123"
 							required
-							class="bg-white px-4 py-3 rounded-lg outline-dashed outline-gray-200 focus:outline-sky-400 focus:outline-offset-2"
+							class="bg-white px-4 py-3 rounded-lg outline-dashed outline-gray-200 focus:outline-blue-400 focus:outline-offset-2"
 						>
 					</div> -->
 						<button

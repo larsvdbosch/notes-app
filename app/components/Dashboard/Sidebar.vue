@@ -47,7 +47,7 @@ const { notes } = useNotes();
 				:key="note.id"
 			>
 				<NuxtLink class="cursor-pointer">
-					<article class="flex flex-col gap-2 bg-sky-50 hover:bg-sky-100 border border-sky-200 transition-colors duration-[.25s] text-primary-dark p-4 rounded-lg w-full">
+					<article class="flex flex-col gap-2 bg-blue-50 hover:bg-blue-100 border border-blue-200 transition-colors duration-[.25s] text-primary-dark p-4 rounded-lg w-full">
 						<h1 class="font-semibold text-black text-2xl line-clamp-1">
 							{{ note.title }}
 						</h1>

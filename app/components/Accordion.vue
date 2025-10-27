@@ -42,7 +42,7 @@ defineProps<IProps>();
 </script>
 
 <template>
-	<article class="outer bg-sky-50 hover:bg-sky-100 border border-sky-400 transition-colors duration-[.25s] ease-out">
+	<article class="outer bg-white hover:bg-gray-100 border border-gray-200 transition-colors duration-[.25s] ease-out">
 		<button
 			id="accordion"
 			class="accordion"
@@ -125,7 +125,7 @@ defineProps<IProps>();
 }
 
 .chevron-icon {
-	transition: transform 150ms ease;
+	transition: transform .25s ease-out;
 }
 
 .rotate-chevron {

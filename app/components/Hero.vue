@@ -9,7 +9,7 @@
 					Notably is a completely free website for writing down notes. Fast, secure, free.
 				</p>
 				<Button to="/login">
-					Try Notably
+					Sign in
 				</Button>
 			</div>
 		</section>

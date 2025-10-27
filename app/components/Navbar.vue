@@ -5,16 +5,35 @@
 				<Logo />
 			</NuxtLink>
 			<div class="flex items-center gap-4">
-				<NuxtLink to="/login">
-					<span class="text-black text-sm">Log in</span>
-				</NuxtLink>
-				<Button to="login">
-					Try Notably
+				<HeaderLink
+					to="/"
+					name="Home"
+				/>
+				<HeaderLink
+					to="/"
+					name="Features"
+				/>
+				<HeaderLink
+					to="https://larsvandenbosch.netlify.app/"
+					name="Portfolio"
+					target="_blank"
+					rel="noopener noreferrer"
+				/>
+				<div class="flex gap-1">
+					<IconLink
+						to="https://github.com/larsvdbosch/notes-app.git"
+						img="github.svg"
+						target="_blank"
+						rel="noopener noreferrer"
+					/>
+					<IconLink
+						img="moon.svg"
+					/>
+				</div>
+				<Button to="dashboard">
+					Dashboard
 				</Button>
 			</div>
 		</section>
 	</header>
 </template>
-
-<script setup lang="ts">
-</script>
