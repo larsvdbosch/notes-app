@@ -9,7 +9,10 @@ body {
   --color-accordion-background: white;
   --color-accordion-hover: #f1f1f1;
   --color-accordion-border: #e7e4e4;
+  background-color: var(--color-background)
 ;
+
+body {}
   
 }
 
@@ -20,6 +23,7 @@ body {
   --color-accordion-background: #121212;
   --color-accordion-hover: #181818;
   --color-accordion-border: #232323;
+  background-color: var(--color-background)
 }
 
 ::selection {
