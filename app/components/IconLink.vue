@@ -1,13 +1,11 @@
 <template>
 	<NuxtLink
 		:to="to"
-		class="flex p-2 rounded-lg hover:bg-gray-100 transition-colors duration-[.25s] ease-out items-center cursor-pointer"
+		class="flex  p-2 rounded-lg hover:bg-[var(--color-accordion-hover)] transition-colors duration-[.25s] ease-out items-center"
 	>
-		<NuxtImg
-			:src="`/assets/svg/${img}`"
-			alt="Link Icon"
-			width="24"
-			height="24"
+		<Icon
+			:name="`my-icon:${icon}`"
+			class="text-[var(--color-text)]"
 		/>
 	</NuxtLink>
 </template>
@@ -15,7 +13,7 @@
 <script lang="ts" setup>
 interface Props {
 	to?: string;
-	img: string;
+	icon: string;
 }
 
 defineProps<Props>();

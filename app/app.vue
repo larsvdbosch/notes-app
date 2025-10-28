@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-white antialiased">
+	<div class="antialiased bg-[var(--color-background)]">
 		<NuxtLayout>
 			<NuxtRouteAnnouncer />
 			<NuxtPage />

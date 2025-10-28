@@ -1,8 +1,6 @@
 <template>
-	<NuxtImg
-		src="/assets/svg/logo.svg"
-		alt="Logo"
-		width="128"
-		height="128"
+	<Icon
+		name="my-icon:logo"
+		class="text-[var(--color-text)] size-32"
 	/>
 </template>

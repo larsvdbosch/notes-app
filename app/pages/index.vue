@@ -1,12 +1,12 @@
 <template>
-	<div class="bg-gradient-to-b from-white to-blue-200">
+	<div>
 		<Navbar />
 		<Hero />
 		<USP />
 		<div>
 			<section class="container padding-section px-4">
 				<div class="flex flex-col items-center gap-16">
-					<h1 class="heading max-w-lg text-center">
+					<h1 class="heading max-w-lg text-center text-[var(--color-text)]">
 						What people say about Notably
 					</h1>
 					<div
@@ -29,7 +29,7 @@
 		<div class="">
 			<section class="container padding-section px-4">
 				<div class="flex flex-col items-center gap-16">
-					<h1 class="heading text-center">
+					<h1 class="heading text-center text-[var(--color-text)]">
 						Frequently asked questions
 					</h1>
 					<div class="flex flex-col gap-4">

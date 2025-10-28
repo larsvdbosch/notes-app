@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<section class="container padding-section flex justify-center px-4">
-			<div class="flex items-center gap-4 flex-col">
+			<div class="flex items-center text-[var(--color-text)] gap-4 flex-col">
 				<h1 class="heading-hero max-w-3xl">
 					The new note taking app you can’t miss out on
 				</h1>

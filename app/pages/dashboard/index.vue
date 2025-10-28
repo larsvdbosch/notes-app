@@ -28,4 +28,8 @@ definePageMeta({
 	layout: "dashboard",
 	middleware: "auth",
 });
+
+onMounted(() => {
+	document.body.classList.remove("dark-mode");
+});
 </script>

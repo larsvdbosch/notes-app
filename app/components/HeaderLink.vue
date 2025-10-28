@@ -1,9 +1,9 @@
 <template>
 	<NuxtLink
 		:to="to"
-		class="flex p-2 rounded-lg hover:bg-gray-100 transition-colors duration-[.25s] ease-out items-center"
+		class="flex p-2 rounded-lg hover:bg-[var(--color-accordion-hover)] transition-colors duration-[.25s] ease-out items-center"
 	>
-		<span class="text-base text-black font-normal">{{ name }}</span>
+		<span class="text-base text-[var(--color-text)] font-normal">{{ name }}</span>
 	</NuxtLink>
 </template>
 

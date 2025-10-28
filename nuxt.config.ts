@@ -6,6 +6,7 @@ export default defineNuxtConfig({
 		"@nuxtjs/tailwindcss",
 		"@nuxt/eslint",
 		"@nuxtjs/supabase",
+		"@nuxt/icon",
 	],
 	devtools: { enabled: true },
 	app: {
@@ -37,7 +38,20 @@ export default defineNuxtConfig({
 			},
 		],
 	},
-	// supabase: {
-	// 	redirect: false,
-	// },
+	icon: {
+		customCollections: [
+			{
+				prefix: "my-icon",
+				dir: "./app/assets/svg",
+				// if you want to include all the icons in nested directories:
+				// recursive: true,
+				width: 24,
+				height: 24,
+			},
+		],
+
+	},
+	supabase: {
+		redirect: false,
+	},
 });

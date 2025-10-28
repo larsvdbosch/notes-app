@@ -1,17 +1,30 @@
 :root {
   --pattern-fg: #f2f2f2;
-  --color-border: #e4e4e7;
-  --color-primary: #090f21;
-  --color-primary-border: #121c2f;
-  --color-primary-dark: #ffffff;
-  --color-secondary: #ff009e;
-  --color-secondary-border: #f00094;
-  --color-secondary-dark: #000000;
+}
+
+body {
+  --color-text: black;
+  --color-background: #FFFFFF;
+  --color-border: #e7e4e4;
+  --color-accordion-background: white;
+  --color-accordion-hover: #f1f1f1;
+  --color-accordion-border: #e7e4e4;
+;
+  
+}
+
+.dark-mode {
+  --color-text: white;
+  --color-background: #070707;
+  --color-border: #121212;
+  --color-accordion-background: #121212;
+  --color-accordion-hover: #181818;
+  --color-accordion-border: #232323;
 }
 
 ::selection {
-  color: white;
-  background: #00bcff;
+  color: #FF2C00;
+  background: #bfdbfe;
 }
 
 .container {
@@ -22,7 +35,6 @@
 .heading-hero {
   font-size: clamp(2.5rem, 4vw, 4rem);
   font-weight: 600;
-  color: black;
   letter-spacing: -2px;
   text-align: center;
   line-height: clamp(2.5rem, 4vw, 4rem);
@@ -31,7 +43,6 @@
 .heading {
   font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 600;
-  color: black;
   letter-spacing: -1px;
   line-height: clamp(2rem, 4vw, 2.5rem);
 }
@@ -39,7 +50,6 @@
 .paragraph-hero {
   font-size: clamp(0.875rem, 4vw, 1rem);
   font-weight: 400;
-  color: black;
   text-align: center;
   line-height: 1.5rem;
 }
@@ -47,7 +57,6 @@
 .paragraph {
   font-size: clamp(0.875rem, 4vw, 1rem);
   font-weight: 400;
-  color: black;
   line-height: 1.5rem;
 }
 
@@ -60,10 +69,17 @@
 
 .label {
   font-size: clamp(0.875rem, 4vw, 1rem);
-  color: black;
   font-weight: 600;
 }
 
 .padding-section {
   padding-block: clamp(4rem, 10vw, 8rem);
+}
+
+.navbar-height {
+  height: 4.5rem;
+}
+
+.margin-navbar-height {
+  margin-top: 4.5rem;
 }

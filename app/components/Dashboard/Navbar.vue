@@ -39,11 +39,9 @@ const { toggle } = toggleSidebar();
 					class="flex lg:hidden gap-1 items-center text-sm text-[#0C0D0E]"
 					@click="toggle"
 				>
-					<NuxtImg
-						src="/assets/svg/menu.svg"
-						alt="menu-icon"
-						width="16"
-						height="16"
+					<Icon
+						name="my-icon:menu"
+						class="size-4"
 					/>
 					<span>Menu</span>
 				</button>

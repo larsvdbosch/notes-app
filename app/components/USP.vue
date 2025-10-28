@@ -1,7 +1,7 @@
 <template>
 	<div class="">
 		<section class="container padding-section flex justify-center px-4">
-			<div class="flex flex-col items-center gap-16">
+			<div class="flex flex-col text-[var(--color-text)] items-center gap-16">
 				<h1 class="heading max-w-3xl">
 					Why Notably?
 				</h1>

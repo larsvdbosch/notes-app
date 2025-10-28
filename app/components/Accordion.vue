@@ -42,33 +42,33 @@ defineProps<IProps>();
 </script>
 
 <template>
-	<article class="outer bg-white hover:bg-gray-100 border border-gray-200 transition-colors duration-[.25s] ease-out">
-		<button
-			id="accordion"
-			class="accordion"
-			:aria-expanded="isOpen"
-			aria-controls="accordion_answer"
-			@click="openAccordion"
-		>
-			<span class="accordion_heading">{{ title }}</span>
-			<NuxtImg
-				src="/assets/svg/chevron-down.svg"
-				alt="Chevron Down"
-				width="32"
-				height="32"
-				class="chevron-icon"
-				:class="{ 'rotate-chevron': isOpen }"
-			/>
-		</button>
-		<div
-			id="accordion_answer"
-			ref="accordionRef"
-			class="accordion_answer"
-		>
-			<span
-				ref="textRef"
-				class="accordion_answer_text"
-			>{{ description }}</span>
+	<article class="outer bg-[var(--color-accordion-background)] hover:bg-[var(--color-accordion-hover)] border border-[var(--color-accordion-border)] text-[var(--color-text)]">
+		<div class="transition-colors duration-[.25s] ease-out">
+			<button
+				id="accordion"
+				class="accordion"
+				:aria-expanded="isOpen"
+				aria-controls="accordion_answer"
+				@click="openAccordion"
+			>
+				<span class="accordion_heading">{{ title }}</span>
+				<Icon
+					name="my-icon:chevron-down"
+					alt="Chevron Down"
+					class="text-[var(--color-text)] chevron-icon"
+					:class="{ 'rotate-chevron': isOpen }"
+				/>
+			</button>
+			<div
+				id="accordion_answer"
+				ref="accordionRef"
+				class="accordion_answer"
+			>
+				<span
+					ref="textRef"
+					class="accordion_answer_text"
+				>{{ description }}</span>
+			</div>
 		</div>
 	</article>
 </template>
@@ -83,9 +83,6 @@ defineProps<IProps>();
 	display: flex;
 	flex-direction: column;
 	max-width: 768px;
-	transition-property: background;
-    transition-duration: .25s;
-    transition-timing-function: ease-out;
 }
 
 .accordion_answer {
@@ -97,7 +94,6 @@ defineProps<IProps>();
 .accordion_answer_text {
 	display: block;
 	font-size: 16px;
-	color: #000000;
 	margin: 0;
 	font-weight: 400;
 	padding: 0 0 16px;
@@ -118,7 +114,6 @@ defineProps<IProps>();
 
 .accordion_heading {
 	font-size: 18px;
-	color: #000000;
 	margin: 0;
 	font-weight: 600;
 	text-align: left;

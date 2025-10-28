@@ -11,7 +11,7 @@
 			/>
 			<div class="flex flex-col items-center pt-16 px-4 min-h-screen">
 				<NuxtImg
-					src="/assets/svg/logo.svg"
+					src="/assets/img/logo.svg"
 					alt="Logo"
 					width="128"
 					height="128"
@@ -75,4 +75,8 @@ const signInWithOtp = async () => {
 	if (error) console.log(error);
 	successMessage.value = "Check your email for the login link!";
 };
+
+onMounted(() => {
+	document.body.classList.remove("dark-mode");
+});
 </script>

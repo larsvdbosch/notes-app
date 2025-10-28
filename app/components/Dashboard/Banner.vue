@@ -10,11 +10,9 @@
 				<span>
 					Early access is live!
 				</span>
-				<NuxtImg
-					src="/assets/svg/arrow-right.svg"
-					alt="Logo"
-					width="20"
-					height="20"
+				<Icon
+					name="my-icon:arrow-right"
+					class="size-4"
 				/>
 			</NuxtLink>
 		</header>
