@@ -12,9 +12,9 @@
 		<NuxtImg
 			:src="`/assets/img/${imgSrc}.png`"
 			alt="Logo"
-			width="1280"
 			loading="lazy"
-			height="720"
+			width="1920"
+			height="1080"
 			class="col-span-2 drop-shadow-lg rounded-2xl object-cover"
 		/>
 	</div>

@@ -150,20 +150,20 @@ const usps = [{
 	tagline: "Online and offline",
 	title: "Write always and everywhere",
 	description: "The best note-taking experience, whether you're online or offline.",
-	imgSrc: "placeholder-white",
+	imgSrc: "new-dashboard",
 },
 {
 	id: 1,
 	tagline: "Private and secure",
 	title: "Privacy is our priority",
 	description: "Your notes are safe with us. We never share your data.",
-	imgSrc: "placeholder-white",
+	imgSrc: "new-dashboard",
 },
 {
 	id: 1,
 	tagline: "Fast and reliable",
 	title: "Faster than the others",
 	description: "Experience lightning-fast note-taking with our optimized app.",
-	imgSrc: "placeholder-white",
+	imgSrc: "new-dashboard",
 }];
 </script>
