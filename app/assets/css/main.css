@@ -1,6 +1,6 @@
-:root {
+/* :root {
   --pattern-fg: #f2f2f2;
-}
+} */
 
 body {
   --color-text: black;
@@ -10,6 +10,7 @@ body {
   --color-accordion-hover: #f1f1f1;
   --color-accordion-border: #e7e4e4;
   --color-banner: #f6f6f6;
+  --color-pattern: #f2f2f2;
   background-color: var(--color-background);
 }
 
@@ -21,6 +22,7 @@ body {
   --color-accordion-hover: #181818;
   --color-accordion-border: #232323;
   --color-banner: #0d0d0d;
+  --color-pattern: rgb(19, 19, 19);
   background-color: var(--color-background)
 }
 
