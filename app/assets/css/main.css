@@ -9,11 +9,7 @@ body {
   --color-accordion-background: white;
   --color-accordion-hover: #f1f1f1;
   --color-accordion-border: #e7e4e4;
-  background-color: var(--color-background)
-;
-
-body {}
-  
+  background-color: var(--color-background);
 }
 
 .dark-mode {
@@ -27,8 +23,8 @@ body {}
 }
 
 ::selection {
-  color: #FF2C00;
-  background: #bfdbfe;
+  color: white;
+  background: #f92aae;
 }
 
 .container {
@@ -67,7 +63,7 @@ body {}
 .tagline {
   font-size: clamp(0.875rem, 4vw, 1rem);
   font-weight: 400;
-  color: #FF2C00;
+  color: #f92aae;
   line-height: 1.5rem;
 }
 

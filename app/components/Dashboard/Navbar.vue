@@ -1,8 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
-<script setup lang="ts">
-const { toggle } = toggleSidebar();
-</script>
-
 <template>
 	<section class="bg-white flex fixed top-8 h-16 z-50 w-full border-border-color border-b">
 		<header
@@ -50,3 +45,8 @@ const { toggle } = toggleSidebar();
 		</section>
 	</section>
 </template>
+
+<!-- eslint-disable vue/multi-word-component-names -->
+<script setup lang="ts">
+const { toggle } = toggleSidebar();
+</script>

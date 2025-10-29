@@ -1,3 +1,35 @@
+<template>
+	<article class="outer bg-[var(--color-accordion-background)] hover:bg-[var(--color-accordion-hover)] border border-[var(--color-accordion-border)] text-[var(--color-text)]">
+		<div class="transition-colors duration-[.25s] ease-out">
+			<button
+				id="accordion"
+				class="accordion"
+				:aria-expanded="isOpen"
+				aria-controls="accordion_answer"
+				@click="openAccordion"
+			>
+				<span class="accordion_heading">{{ title }}</span>
+				<Icon
+					name="my-icon:chevron-down"
+					alt="Chevron Down"
+					class="text-[var(--color-text)] chevron-icon"
+					:class="{ 'rotate-chevron': isOpen }"
+				/>
+			</button>
+			<div
+				id="accordion_answer"
+				ref="accordionRef"
+				class="accordion_answer"
+			>
+				<span
+					ref="textRef"
+					class="accordion_answer_text"
+				>{{ description }}</span>
+			</div>
+		</div>
+	</article>
+</template>
+
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 
@@ -40,38 +72,6 @@ type IProps = {
 // Props worden gedefinieerd voor de component
 defineProps<IProps>();
 </script>
-
-<template>
-	<article class="outer bg-[var(--color-accordion-background)] hover:bg-[var(--color-accordion-hover)] border border-[var(--color-accordion-border)] text-[var(--color-text)]">
-		<div class="transition-colors duration-[.25s] ease-out">
-			<button
-				id="accordion"
-				class="accordion"
-				:aria-expanded="isOpen"
-				aria-controls="accordion_answer"
-				@click="openAccordion"
-			>
-				<span class="accordion_heading">{{ title }}</span>
-				<Icon
-					name="my-icon:chevron-down"
-					alt="Chevron Down"
-					class="text-[var(--color-text)] chevron-icon"
-					:class="{ 'rotate-chevron': isOpen }"
-				/>
-			</button>
-			<div
-				id="accordion_answer"
-				ref="accordionRef"
-				class="accordion_answer"
-			>
-				<span
-					ref="textRef"
-					class="accordion_answer_text"
-				>{{ description }}</span>
-			</div>
-		</div>
-	</article>
-</template>
 
 <style scoped>
 .expand {

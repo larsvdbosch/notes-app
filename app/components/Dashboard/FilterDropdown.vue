@@ -1,14 +1,3 @@
-<script setup lang="ts">
-const { removeNotes } = useNotes();
-const isOpen = ref(false);
-
-const toggleDropdown = () => {
-	isOpen.value = !isOpen.value;
-};
-
-const items = ref([{ name: "Clear all", id: 1, action: removeNotes }, { name: "Filter notes", id: 2 }]);
-</script>
-
 <template>
 	<div
 		class="group"
@@ -33,3 +22,14 @@ const items = ref([{ name: "Clear all", id: 1, action: removeNotes }, { name: "F
 		</ul>
 	</div>
 </template>
+
+<script setup lang="ts">
+const { removeNotes } = useNotes();
+const isOpen = ref(false);
+
+const toggleDropdown = () => {
+	isOpen.value = !isOpen.value;
+};
+
+const items = ref([{ name: "Clear all", id: 1, action: removeNotes }, { name: "Filter notes", id: 2 }]);
+</script>

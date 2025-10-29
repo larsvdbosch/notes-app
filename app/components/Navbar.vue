@@ -5,7 +5,19 @@
 				class="flex items-center"
 				to="/"
 			>
-				<Logo />
+				<!-- <Logo /> -->
+				<DotLottieVue
+					v-if="darkMode"
+					style="height: 64px; width: auto"
+					autoplay
+					src="/assets/lottie/light-logo.lottie"
+				/>
+				<DotLottieVue
+					v-else
+					style="height: 64px; width: auto"
+					autoplay
+					src="/assets/lottie/dark-logo.lottie"
+				/>
 			</NuxtLink>
 			<div class="hidden lg:flex items-center gap-2">
 				<HeaderLink
@@ -47,7 +59,7 @@
 </template>
 
 <script lang="ts" setup>
-const toggleDarkmode = () => {
-	document.body.classList.toggle("dark-mode");
-};
+import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
+
+const { darkMode, toggleDarkmode } = useDarkmode();
 </script>

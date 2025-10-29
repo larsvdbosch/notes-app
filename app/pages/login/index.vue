@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-blue-50 w-full">
+	<div class="bg-[#f6f6f6] w-full">
 		<div class="grid lg:grid-cols-2">
 			<NuxtImg
 				src="/assets/img/login.png"
@@ -10,14 +10,7 @@
 				class="hidden lg:block object-cover w-full h-screen"
 			/>
 			<div class="flex flex-col items-center pt-16 px-4 min-h-screen">
-				<NuxtImg
-					src="/assets/img/logo.svg"
-					alt="Logo"
-					width="128"
-					height="128"
-					loading="eager"
-					class="mb-32"
-				/>
+				<Logo />
 				<div class="flex flex-col items-center gap-4 max-w-lg">
 					<h1 class="heading text-center">
 						Log in
@@ -47,7 +40,7 @@
 						>
 					</div> -->
 						<button
-							class="w-full rounded-full px-4 py-3 bg-[#FF2C00] hover:bg-[#ec2800] text-white font-semibold transition-colors duration-[.25s]"
+							class="w-full rounded-lg px-4 py-3 bg-[#165dfc] hover:bg-[#155aed] text-white font-semibold transition-colors duration-[.25s]"
 							type="button"
 							@click="signInWithOtp"
 						>
