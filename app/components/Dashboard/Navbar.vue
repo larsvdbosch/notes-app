@@ -1,8 +1,6 @@
 <template>
-	<section class="bg-white flex fixed top-8 h-16 z-50 w-full border-border-color border-b">
-		<header
-			class="p-4 flex justify-between items-center w-full"
-		>
+	<header class="sticky z-50 bg-[var(--color-background)]">
+		<section class="h-[var(--height-navbar)] flex justify-between items-center p-4">
 			<Logo to="/" />
 			<Search />
 			<div class="flex gap-2 items-center text-[#0C0D0E] text-sm">
@@ -19,11 +17,11 @@
 					rel="noopener noreferrer"
 				/>
 			</div>
-		</header>
-		<section
-			class="bg-white fixed top-24 h-16 z-50 w-full border-border-color border-b p-4"
+		</section>
+		<div
+			class="sticky z-30 bg-[var(--color-background)] top-[calc(var(--height-navbar)+var(--height-navbar)) border-y border-[var(--color-border)]"
 		>
-			<header class="flex justify-between items-center">
+			<section class="h-[var(--height-navbar)] flex justify-between items-center p-4">
 				<button
 					class="flex lg:hidden gap-1 items-center text-sm text-[#0C0D0E]"
 					@click="toggle"
@@ -35,9 +33,9 @@
 					<span>Menu</span>
 				</button>
 				<DashboardFilterDropdown filter="Clear all" />
-			</header>
-		</section>
-	</section>
+			</section>
+		</div>
+	</header>
 </template>
 
 <!-- eslint-disable vue/multi-word-component-names -->

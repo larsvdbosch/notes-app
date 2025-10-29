@@ -4,17 +4,17 @@
 		@click="toggleDropdown"
 	>
 		<button
-			class="flex items-center cursor-default bg-white hover:bg-[#F8F8F8] border border-[#F0F0F0] transition-colors duration-[.15s] font-normal px-2 py-1 rounded-[4px] gap-1"
+			class="flex relative items-center cursor-default bg-white hover:bg-[#F8F8F8] border border-[#F0F0F0] transition-colors duration-[.15s] font-normal px-2 py-1 rounded-[4px] gap-1"
 		>
 			<Icon name="my-icon:menu-icon" />
 			<span>Options</span>
 		</button>
-		<ul>
+		<ul class="absolute mt-2 ">
 			<NuxtLink
 				v-for="item in items"
 				:key="item.id"
 				:class="{ hidden: !isOpen }"
-				class="flex mt-1 items-center cursor-default bg-white hover:bg-[#F8F8F8] border border-[#F0F0F0] transition-colors duration-[.15s] font-normal px-2 py-1 rounded-[4px] gap-1"
+				class="flex flex-col mb-2 items-center cursor-default bg-white hover:bg-[#F8F8F8] border border-[#F0F0F0] transition-colors duration-[.15s] font-normal px-2 py-1 rounded-[4px]"
 				@click="item.action"
 			>
 				{{ item.name }}
