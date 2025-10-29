@@ -7,7 +7,7 @@
 			name="my-icon:halloween"
 			class="animate-bounce size-8"
 		/>
-		<span class="text-3xl font-semibold tracking-tighter text-[var(--color-text)]">
+		<span class="text-3xl font-semibold tracking-tighter text-orange-500">
 			Notably
 		</span>
 	</NuxtLink>

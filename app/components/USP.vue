@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col lg:grid grid-cols-3 gap-4 lg:gap-16">
+	<div class="flex flex-col items-center lg:grid grid-cols-3 gap-4 lg:gap-16">
 		<div class="flex flex-col gap-2">
 			<span class="tagline">{{ tagline }}</span>
 			<h1 class="heading">
@@ -12,10 +12,10 @@
 		<NuxtImg
 			:src="`/assets/img/${imgSrc}.png`"
 			alt="Logo"
-			width="auto"
+			width="1280"
 			loading="lazy"
-			height="auto"
-			class="col-span-2 drop-shadow-lg rounded-2xl"
+			height="720"
+			class="col-span-2 drop-shadow-lg rounded-2xl object-cover"
 		/>
 	</div>
 </template>

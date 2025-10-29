@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<Navbar />
 		<Hero />
 		<div>
 			<section class="container padding-section flex justify-center px-4">
@@ -42,7 +41,7 @@
 				</div>
 			</section>
 		</div>
-		<div class="">
+		<div>
 			<section class="container padding-section px-4">
 				<div class="flex flex-col items-center gap-16">
 					<h1 class="heading text-center text-[var(--color-text)]">
@@ -150,21 +149,21 @@ const usps = [{
 	id: 1,
 	tagline: "Online and offline",
 	title: "Write always and everywhere",
-	description: "The best note-taking experience",
-	imgSrc: "new-dashboard",
+	description: "The best note-taking experience, whether you're online or offline.",
+	imgSrc: "placeholder-white",
 },
 {
 	id: 1,
-	tagline: "Online and offline",
-	title: "Write always and everywhere",
-	description: "The best note-taking experience",
-	imgSrc: "new-dashboard",
+	tagline: "Private and secure",
+	title: "Privacy is our priority",
+	description: "Your notes are safe with us. We never share your data.",
+	imgSrc: "placeholder-white",
 },
 {
 	id: 1,
-	tagline: "Online and offline",
-	title: "Write always and everywhere",
-	description: "The best note-taking experience",
-	imgSrc: "new-dashboard",
+	tagline: "Fast and reliable",
+	title: "Faster than the others",
+	description: "Experience lightning-fast note-taking with our optimized app.",
+	imgSrc: "placeholder-white",
 }];
 </script>

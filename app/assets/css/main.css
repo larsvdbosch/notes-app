@@ -9,6 +9,7 @@ body {
   --color-accordion-background: white;
   --color-accordion-hover: #f1f1f1;
   --color-accordion-border: #e7e4e4;
+  --color-banner: #f6f6f6;
   background-color: var(--color-background);
 }
 
@@ -19,6 +20,7 @@ body {
   --color-accordion-background: #121212;
   --color-accordion-hover: #181818;
   --color-accordion-border: #232323;
+  --color-banner: #0d0d0d;
   background-color: var(--color-background)
 }
 

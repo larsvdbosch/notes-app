@@ -1,5 +1,5 @@
 <template>
-	<header class="sticky inset-x-0 top-0 z-30 bg-[var(--color-background)] border-b border-[var(--color-border)]">
+	<header class="sticky inset-x-0 top-8 z-30 bg-[var(--color-background)] border-b border-[var(--color-border)]">
 		<section class="container navbar-height flex justify-between items-center p-4">
 			<Logo to="/" />
 			<div class="hidden lg:flex items-center gap-2">
@@ -10,6 +10,10 @@
 				<HeaderLink
 					to="/"
 					name="Features"
+				/>
+				<HeaderLink
+					to="/"
+					name="Changelog"
 				/>
 				<HeaderLink
 					to="https://larsvandenbosch.netlify.app/"

@@ -5,7 +5,7 @@
 				src="/assets/img/login.png"
 				alt="Login image"
 				width="840"
-				loading="eager"
+				loading="lazy"
 				height="1200"
 				class="hidden lg:block object-cover w-full h-screen"
 			/>
@@ -56,5 +56,9 @@ const { email, errorMessage, successMessage, signInWithOtp } = getUser();
 
 onMounted(() => {
 	document.body.classList.remove("dark-mode");
+});
+
+definePageMeta({
+	layout: "none",
 });
 </script>
