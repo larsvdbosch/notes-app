@@ -10,7 +10,7 @@ export const getUser = () => {
 		const { error } = await supabase.auth.signInWithOtp({
 			email: email.value,
 			options: {
-				emailRedirectTo: "https://larsnotesapp.netlify.app/confirm",
+				emailRedirectTo: "https://notes-app-phi-weld.vercel.app/confirm",
 			},
 		});
 		if (error) {
