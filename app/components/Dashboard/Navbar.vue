@@ -3,27 +3,21 @@
 		<header
 			class="p-4 flex justify-between items-center w-full"
 		>
-			<NuxtLink
-				to="/"
-			>
-				<Logo />
-			</NuxtLink>
+			<Logo to="/" />
 			<Search />
-			<div class="flex gap-8 items-center text-[#0C0D0E] text-sm">
-				<a
-					href="https://github.com/larsvdbosch"
+			<div class="flex gap-2 items-center text-[#0C0D0E] text-sm">
+				<HeaderLink
+					to="https://github.com/larsvdbosch"
+					name="Github"
 					target="_blank"
 					rel="noopener noreferrer"
-				>
-					<span class="hover:text-gray-600 transition-colors duration-[.25s]">Github</span>
-				</a>
-				<a
-					href="https://larsvandenbosch.netlify.app/"
+				/>
+				<HeaderLink
+					to="https://larsvandenbosch.netlify.app/"
+					name="Portfolio"
 					target="_blank"
 					rel="noopener noreferrer"
-				>
-					<span class="hover:text-gray-600 transition-colors duration-[.25s]">My portfolio</span>
-				</a>
+				/>
 			</div>
 		</header>
 		<section

@@ -15,7 +15,7 @@
 			width="auto"
 			loading="lazy"
 			height="auto"
-			class="col-span-2 drop-shadow-xl"
+			class="col-span-2 drop-shadow-lg rounded-2xl"
 		/>
 	</div>
 </template>

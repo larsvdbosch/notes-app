@@ -1,24 +1,7 @@
 <template>
 	<header class="sticky inset-x-0 top-0 z-30 bg-[var(--color-background)] border-b border-[var(--color-border)]">
 		<section class="container navbar-height flex justify-between items-center p-4">
-			<NuxtLink
-				class="flex items-center"
-				to="/"
-			>
-				<!-- <Logo /> -->
-				<DotLottieVue
-					v-if="darkMode"
-					style="height: 56px; width: auto"
-					autoplay
-					src="/assets/lottie/light-logo.lottie"
-				/>
-				<DotLottieVue
-					v-else
-					style="height: 56px; width: auto"
-					autoplay
-					src="/assets/lottie/dark-logo.lottie"
-				/>
-			</NuxtLink>
+			<Logo to="/" />
 			<div class="hidden lg:flex items-center gap-2">
 				<HeaderLink
 					to="/"
@@ -59,7 +42,7 @@
 					class="hidden lg:block"
 					to="login"
 				>
-					Sign In
+					Sign in
 				</Button>
 				<Avatar v-if="isLoggedIn" />
 			</div>
@@ -68,9 +51,9 @@
 </template>
 
 <script lang="ts" setup>
-import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
+// import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
 
 const { isLoggedIn } = getUser();
 
-const { darkMode, toggleDarkmode } = useDarkmode();
+const { toggleDarkmode } = useDarkmode();
 </script>

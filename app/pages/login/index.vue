@@ -10,10 +10,10 @@
 				class="hidden lg:block object-cover w-full h-screen"
 			/>
 			<div class="flex flex-col items-center pt-16 px-4 min-h-screen">
-				<Logo />
+				<Logo class="mb-32" />
 				<div class="flex flex-col items-center gap-4 max-w-lg">
 					<h1 class="heading text-center">
-						Log in
+						Sign in
 					</h1>
 					<span class="paragraph text-center">
 						Fill in your email and open your inbox. Click the link to get access.
@@ -42,7 +42,7 @@
 							type="button"
 							@click="signInWithOtp"
 						>
-							Log in
+							Sign in
 						</button>
 					</form>
 				</div>
