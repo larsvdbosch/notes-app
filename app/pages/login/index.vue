@@ -38,7 +38,7 @@
 							>{{ successMessage }}</span>
 						</div>
 						<button
-							class="w-full rounded-lg px-4 py-3 bg-[#165dfc] hover:bg-[#155aed] text-white font-semibold transition-colors duration-[.25s]"
+							class="w-full rounded-lg px-4 py-3 bg-[#165dfc] hover:bg-[#155aed] active-state text-white font-semibold transition-colors duration-[.25s]"
 							type="button"
 							@click="signInWithOtp"
 						>

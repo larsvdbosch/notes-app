@@ -12,6 +12,8 @@ body {
   --color-banner: #f6f6f6;
   --color-pattern: #f2f2f2;
   background-color: var(--color-background);
+  --height-navbar: 4.5rem;
+  --height-banner: 2.5rem;
 }
 
 .dark-mode {
@@ -29,6 +31,11 @@ body {
 ::selection {
   color: white;
   background: #f92aae;
+}
+
+.active-state:active {
+	outline: solid 2px #165dfc;
+	outline-offset: 2px;
 }
 
 .container {
@@ -78,12 +85,4 @@ body {
 
 .padding-section {
   padding-block: clamp(4rem, 10vw, 8rem);
-}
-
-.navbar-height {
-  height: 4.5rem;
-}
-
-.margin-navbar-height {
-  margin-top: 4.5rem;
 }

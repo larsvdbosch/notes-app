@@ -1,6 +1,6 @@
 <template>
-	<header class="sticky inset-x-0 top-8 z-30 bg-[var(--color-background)] border-b border-[var(--color-border)]">
-		<section class="container navbar-height flex justify-between items-center p-4">
+	<header class="sticky z-30 bg-[var(--color-background)] border-b border-[var(--color-border)]">
+		<section class="container h-[var(--height-navbar)] flex justify-between items-center p-4">
 			<Logo to="/" />
 			<div class="hidden lg:flex items-center gap-2">
 				<HeaderLink
@@ -15,14 +15,14 @@
 					to="/"
 					name="Changelog"
 				/>
-				<HeaderLink
+				<!-- <HeaderLink
 					to="https://larsvandenbosch.netlify.app/"
 					name="Portfolio"
 					target="_blank"
 					rel="noopener noreferrer"
-				/>
+				/> -->
 			</div>
-			<div class="flex gap-2">
+			<div class="flex items-center gap-2">
 				<IconLink
 					to="https://github.com/larsvdbosch/notes-app.git"
 					icon="github"

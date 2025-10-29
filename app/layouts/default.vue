@@ -4,9 +4,10 @@
 <template>
 	<div>
 		<DashboardBanner />
-		<Navbar />
+		<Navbar class="top-[var(--height-banner)]" />
 		<main>
 			<slot />
 		</main>
+		<Footer />
 	</div>
 </template>

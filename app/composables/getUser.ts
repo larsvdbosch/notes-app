@@ -14,7 +14,7 @@ export const getUser = () => {
 			},
 		});
 		if (error) {
-			errorMessage.value = "Invalid email address.";
+			errorMessage.value = "An error occurred. Please try again.";
 			console.log(error);
 		}
 		else {

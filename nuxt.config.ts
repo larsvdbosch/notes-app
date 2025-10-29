@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	app: {
 		head: {
-			title: "Notably | Take notes", // default fallback title
+			title: "Notably Notes", // default fallback title
 			htmlAttrs: {
 				lang: "en",
 			},

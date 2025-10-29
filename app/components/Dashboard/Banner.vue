@@ -1,7 +1,7 @@
 <template>
-	<section class="bg-[var(--color-banner)] flex fixed top-0 h-8 z-50 w-full border-[var(--color-border)] border-b">
-		<header
-			class="p-4 flex justify-center items-center w-full"
+	<section class="sticky top-0 z-50 bg-[var(--color-banner)] border-[var(--color-border)] border-b">
+		<div
+			class="h-[var(--height-banner)] flex justify-center items-center p-4 w-full"
 		>
 			<NuxtLink
 				to="/"
@@ -15,6 +15,6 @@
 					class="size-4"
 				/>
 			</NuxtLink>
-		</header>
+		</div>
 	</section>
 </template>

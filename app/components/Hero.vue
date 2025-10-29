@@ -3,22 +3,15 @@
 		<section class="container padding-section flex justify-center px-4">
 			<div class="flex items-center text-[var(--color-text)] gap-4 flex-col">
 				<h1 class="heading-hero max-w-3xl">
-					The new note taking app you can’t miss out on
+					{{ title }}
 				</h1>
 				<p class="paragraph-hero max-w-md">
-					Notably is a completely free website for writing down notes. Fast, secure, free.
+					{{ description }}
 				</p>
 				<Button
-					v-if="isLoggedIn"
-					to="/dashboard"
+					:to="to"
 				>
-					Dashboard
-				</Button>
-				<Button
-					v-else
-					to="/login"
-				>
-					Sign in
+					{{ buttonText }}
 				</Button>
 			</div>
 		</section>
@@ -26,5 +19,12 @@
 </template>
 
 <script lang="ts" setup>
-const { isLoggedIn } = getUser();
+interface Props {
+	title: string;
+	description: string;
+	buttonText: string;
+	to: string;
+}
+
+defineProps<Props>();
 </script>

@@ -1,6 +1,11 @@
 <template>
 	<div>
-		<Hero />
+		<Hero
+			title="The new note taking app you can’t miss out on"
+			description="Notably is a completely free website for writing down notes. Fast, secure, free."
+			button-text="Sign in"
+			to="/login"
+		/>
 		<div>
 			<section class="container padding-section flex justify-center px-4">
 				<div class="flex flex-col text-[var(--color-text)] items-center gap-16">

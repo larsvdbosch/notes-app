@@ -1,11 +1,11 @@
 <template>
 	<NuxtLink
 		:to="to"
-		class="flex  p-2 rounded-lg hover:bg-[var(--color-accordion-hover)] transition-colors duration-[.25s] ease-out items-center"
+		class="flex p-2 rounded-lg active-state hover:bg-[var(--color-accordion-hover)] transition-colors duration-[.25s] ease-out items-center"
 	>
 		<Icon
 			:name="`my-icon:${icon}`"
-			class="text-[var(--color-text)]"
+			class="text-[var(--color-text)] size-5"
 		/>
 	</NuxtLink>
 </template>
