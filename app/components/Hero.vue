@@ -8,10 +8,23 @@
 				<p class="paragraph-hero max-w-md">
 					Notably is a completely free website for writing down notes. Fast, secure, free.
 				</p>
-				<Button to="/login">
+				<Button
+					v-if="isLoggedIn"
+					to="/dashboard"
+				>
+					Dashboard
+				</Button>
+				<Button
+					v-else
+					to="/login"
+				>
 					Sign in
 				</Button>
 			</div>
 		</section>
 	</div>
 </template>
+
+<script lang="ts" setup>
+const { isLoggedIn } = getUser();
+</script>

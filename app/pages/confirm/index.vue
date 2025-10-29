@@ -9,7 +9,7 @@ watch(user, () => {
 		// Redirect to the saved path, or fallback to home
 		return navigateTo(path || "/dashboard");
 	}
-}, { immediate: false });
+}, { immediate: true });
 </script>
 
 <template>

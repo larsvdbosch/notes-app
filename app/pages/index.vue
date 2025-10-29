@@ -2,7 +2,23 @@
 	<div>
 		<Navbar />
 		<Hero />
-		<USP />
+		<div>
+			<section class="container padding-section flex justify-center px-4">
+				<div class="flex flex-col text-[var(--color-text)] items-center gap-16">
+					<h1 class="heading max-w-3xl">
+						Why Notably?
+					</h1>
+					<USP
+						v-for="usp in usps"
+						:key="usp.id"
+						:tagline="usp.tagline"
+						:title="usp.title"
+						:description="usp.description"
+						:img-src="usp.imgSrc"
+					/>
+				</div>
+			</section>
+		</div>
 		<div>
 			<section class="container padding-section px-4">
 				<div class="flex flex-col items-center gap-16">
@@ -128,5 +144,27 @@ const questions = [{
 	id: 5,
 	title: "Can I use it online and offline?",
 	description: "Notably is a note-taking app that helps you organize your thoughts and ideas in a simple and intuitive way. With Notably, you can create, edit, and manage your notes effortlessly.",
+}];
+
+const usps = [{
+	id: 1,
+	tagline: "Online and offline",
+	title: "Write always and everywhere",
+	description: "The best note-taking experience",
+	imgSrc: "new-dashboard",
+},
+{
+	id: 1,
+	tagline: "Online and offline",
+	title: "Write always and everywhere",
+	description: "The best note-taking experience",
+	imgSrc: "new-dashboard",
+},
+{
+	id: 1,
+	tagline: "Online and offline",
+	title: "Write always and everywhere",
+	description: "The best note-taking experience",
+	imgSrc: "new-dashboard",
 }];
 </script>

@@ -8,13 +8,13 @@
 				<!-- <Logo /> -->
 				<DotLottieVue
 					v-if="darkMode"
-					style="height: 64px; width: auto"
+					style="height: 56px; width: auto"
 					autoplay
 					src="/assets/lottie/light-logo.lottie"
 				/>
 				<DotLottieVue
 					v-else
-					style="height: 64px; width: auto"
+					style="height: 56px; width: auto"
 					autoplay
 					src="/assets/lottie/dark-logo.lottie"
 				/>
@@ -48,11 +48,20 @@
 				/>
 				<Offscreen />
 				<Button
+					v-if="isLoggedIn"
 					class="hidden lg:block"
 					to="dashboard"
 				>
 					Dashboard
 				</Button>
+				<Button
+					v-else
+					class="hidden lg:block"
+					to="login"
+				>
+					Sign In
+				</Button>
+				<Avatar v-if="isLoggedIn" />
 			</div>
 		</section>
 	</header>
@@ -60,6 +69,8 @@
 
 <script lang="ts" setup>
 import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
+
+const { isLoggedIn } = getUser();
 
 const { darkMode, toggleDarkmode } = useDarkmode();
 </script>

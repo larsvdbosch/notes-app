@@ -37,11 +37,6 @@
 			>
 				{{ item.name }}
 			</NuxtLink>
-			<!-- <Button
-				to="dashboard"
-			>
-				Dashboard
-			</Button> -->
 		</div>
 	</aside>
 </template>

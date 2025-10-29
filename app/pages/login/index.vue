@@ -28,17 +28,15 @@
 								placeholder="me@mail.com"
 								class="bg-white px-4 py-3 rounded-lg outline-dashed outline-gray-200 focus:outline-blue-400 focus:outline-offset-2"
 							>
-							<span class="tagline">{{ successMessage }}</span>
+							<span
+								v-show="errorMessage"
+								class="paragraph text-red-500"
+							>{{ errorMessage }}</span>
+							<span
+								v-show="successMessage"
+								class="paragraph text-emerald-500"
+							>{{ successMessage }}</span>
 						</div>
-						<!-- <div class="flex flex-col gap-1">
-						<span class="label">Wachtwoord</span>
-						<input
-							type="text"
-							placeholder="welkom123"
-							required
-							class="bg-white px-4 py-3 rounded-lg outline-dashed outline-gray-200 focus:outline-blue-400 focus:outline-offset-2"
-						>
-					</div> -->
 						<button
 							class="w-full rounded-lg px-4 py-3 bg-[#165dfc] hover:bg-[#155aed] text-white font-semibold transition-colors duration-[.25s]"
 							type="button"
@@ -54,20 +52,7 @@
 </template>
 
 <script lang="ts" setup>
-const supabase = useSupabaseClient();
-const email = ref("");
-const successMessage = ref("");
-
-const signInWithOtp = async () => {
-	const { error } = await supabase.auth.signInWithOtp({
-		email: email.value,
-		options: {
-			emailRedirectTo: "https://larsnotesapp.netlify.app/confirm",
-		},
-	});
-	if (error) console.log(error);
-	successMessage.value = "Check your email for the login link!";
-};
+const { email, errorMessage, successMessage, signInWithOtp } = getUser();
 
 onMounted(() => {
 	document.body.classList.remove("dark-mode");
