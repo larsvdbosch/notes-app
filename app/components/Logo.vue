@@ -1,7 +1,7 @@
 <template>
 	<NuxtLink
 		class="flex items-center gap-1 cursor-pointer"
-		:to="to"
+		@click="backTo"
 	>
 		<Icon
 			name="my-icon:halloween"
@@ -14,9 +14,9 @@
 </template>
 
 <script lang="ts" setup>
-interface Props {
-	to?: string;
-}
+const router = useRouter()
 
-defineProps<Props>();
+const backTo = () => {
+	router.push('/')
+}
 </script>

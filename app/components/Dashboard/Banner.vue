@@ -4,7 +4,7 @@
 			class="h-[var(--height-banner)] flex justify-center items-center p-4 w-full"
 		>
 			<NuxtLink
-				to="/"
+				to="https://github.com/larsvdbosch/notes-app"
 				class="flex items-center text-[#f92aae] hover:text-[#e21f9b] text-sm font-medium gap-1 transition-color duration-[.15s] ease-out"
 			>
 				<span>

@@ -5,7 +5,7 @@
 			<div class="flex items-center gap-2">
 				<NuxtImg
 					:src="`/assets/img/${avatar}`"
-					alt="Avatar"
+					:alt="`Avatar of ${author}`"
 					width="48"
 					height="48"
 					class="rounded-full"

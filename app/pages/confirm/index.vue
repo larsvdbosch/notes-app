@@ -13,7 +13,7 @@ watch(user, () => {
 </script>
 
 <template>
-	<div class="flex items-center justify-center padding-section">
+	<main class="flex items-center justify-center padding-section">
 		<DashboardLoader />
-	</div>
+	</main>
 </template>

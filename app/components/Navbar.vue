@@ -1,26 +1,20 @@
 <template>
 	<header class="sticky z-30 bg-[var(--color-background)] border-b border-[var(--color-border)]">
 		<section class="container h-[var(--height-navbar)] flex justify-between items-center p-4">
-			<Logo to="/" />
+			<Logo />
 			<div class="hidden lg:flex items-center gap-2">
 				<HeaderLink
 					to="/"
 					name="Home"
 				/>
 				<HeaderLink
-					to="/"
+					to="/features"
 					name="Features"
 				/>
 				<HeaderLink
-					to="/"
+					to="/changelog"
 					name="Changelog"
 				/>
-				<!-- <HeaderLink
-					to="https://larsvandenbosch.netlify.app/"
-					name="Portfolio"
-					target="_blank"
-					rel="noopener noreferrer"
-				/> -->
 			</div>
 			<div class="flex items-center gap-2">
 				<IconLink
@@ -28,10 +22,19 @@
 					icon="github"
 					target="_blank"
 					rel="noopener noreferrer"
+					label="github"
 				/>
 				<IconLink
+				v-if="darkMode"
+					icon="sun"
+					@click="toggleDarkmode"
+					label="sun"
+				/>
+				<IconLink
+				v-else
 					icon="moon"
 					@click="toggleDarkmode"
+					label="moon"
 				/>
 				<Offscreen />
 				<Button
@@ -59,5 +62,5 @@
 
 const { isLoggedIn } = getUser();
 
-const { toggleDarkmode } = useDarkmode();
+const { toggleDarkmode, darkMode } = useDarkmode();
 </script>

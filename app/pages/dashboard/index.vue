@@ -1,6 +1,5 @@
 <template>
-	<div>
-		<div class="flex flex-col gap-4 lg:ml-96 px-4 py-6 lg:px-16 lg:py-12 min-h-screen text-[#0C0D0E]">
+		<main class="flex flex-col gap-4 lg:ml-96 px-4 py-6 lg:px-16 lg:py-12 min-h-screen text-[var(--color-text)]">
 			<textarea
 				v-model="noteTitle"
 				placeholder="De planning voor morgen..."
@@ -17,8 +16,7 @@
 				rows="30"
 				@keyup.enter="addNote"
 			/>
-		</div>
-	</div>
+		</main>
 </template>
 
 <script setup lang="ts">

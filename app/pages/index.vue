@@ -1,38 +1,36 @@
 <template>
-	<div>
+	<main>
 		<Hero
 			title="The new note taking app you can’t miss out on"
 			description="Notably is a completely free website for writing down notes. Fast, secure, free."
-			button-text="Sign in"
+			label="Sign in"
 			to="/login"
 		/>
-		<div>
 			<section class="container padding-section flex justify-center px-4">
-				<div class="flex flex-col text-[var(--color-text)] items-center gap-16">
-					<h1 class="heading max-w-3xl">
+				<ul class="flex flex-col text-[var(--color-text)] items-center gap-16">
+					<h2 class="heading max-w-3xl">
 						Why Notably?
-					</h1>
-					<USP
-						v-for="usp in usps"
-						:key="usp.id"
-						:tagline="usp.tagline"
-						:title="usp.title"
-						:description="usp.description"
-						:img-src="usp.imgSrc"
-					/>
-				</div>
+					</h2>
+					<li v-for="usp in usps"
+						:key="usp.id">
+						<USP
+							:tagline="usp.tagline"
+							:title="usp.title"
+							:description="usp.description"
+							:img-src="usp.imgSrc"
+						/>
+					</li>
+				</ul>
 			</section>
-		</div>
-		<div>
 			<section class="container padding-section px-4">
 				<div class="flex flex-col items-center gap-16">
-					<h1 class="heading max-w-lg text-center text-[var(--color-text)]">
+					<h2 class="heading max-w-lg text-center text-[var(--color-text)]">
 						What people say about Notably
-					</h1>
-					<div
+					</h2>
+					<ul
 						class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
 					>
-						<article
+						<li
 							v-for="review in reviews"
 							:key="review.id"
 						>
@@ -41,19 +39,17 @@
 								:author="review.author"
 								:avatar="review.avatar"
 							/>
-						</article>
-					</div>
+						</li>
+					</ul>
 				</div>
 			</section>
-		</div>
-		<div>
 			<section class="container padding-section px-4">
 				<div class="flex flex-col items-center gap-16">
-					<h1 class="heading text-center text-[var(--color-text)]">
+					<h2 class="heading text-center text-[var(--color-text)]">
 						Frequently asked questions
-					</h1>
-					<div class="flex flex-col gap-4">
-						<div
+					</h2>
+					<ul class="flex flex-col gap-4">
+						<li
 							v-for="question in questions"
 							:key="question.id"
 						>
@@ -61,12 +57,11 @@
 								:title="question.title"
 								:description="question.description"
 							/>
-						</div>
-					</div>
+						</li>
+					</ul>
 				</div>
 			</section>
-		</div>
-	</div>
+	</main>
 </template>
 
 <script lang="ts" setup>
@@ -158,14 +153,14 @@ const usps = [{
 	imgSrc: "new-dashboard",
 },
 {
-	id: 1,
+	id: 2,
 	tagline: "Private and secure",
 	title: "Privacy is our priority",
 	description: "Your notes are safe with us. We never share your data.",
 	imgSrc: "new-dashboard",
 },
 {
-	id: 1,
+	id: 3,
 	tagline: "Fast and reliable",
 	title: "Faster than the others",
 	description: "Experience lightning-fast note-taking with our optimized app.",

@@ -21,23 +21,22 @@
 	</button>
 	<aside
 		:class="[
-			'fixed top-[calc(var(--height-banner)+var(--height-navbar))] block p-4 block-col gap-2 bg-[var(--color-background)] inset-0 z-50 border-t border-[var(--color-border)] transition-all duration-[.25s] ease-out lg:hidden', // default
+			'fixed top-[calc(var(--height-banner)+var(--height-navbar))] block p-4 block-col gap-2 bg-[var(--color-background)] inset-0 z-50 border-t border-[var(--color-border)] transition-transform duration-[.25s] ease-out lg:hidden', // default
 			{ 'translate-x-0': isOpen === true }, // open
 			{ 'translate-x-full': isOpen === false }, // close
 		]"
 	>
-		<div
+		<ul
 			class="flex flex-col gap-4"
 		>
-			<NuxtLink
-				v-for="item in items"
-				:key="item.name"
-				:to="item.to"
-				class="heading text-[var(--color-text)]"
-			>
-				{{ item.name }}
-			</NuxtLink>
-		</div>
+			<li>
+				<HeaderLink
+					v-for="item in items"
+					:key="item.name"
+					:to="item.to"
+					:name="item.name" />
+			</li>
+		</ul>
 	</aside>
 </template>
 
@@ -58,7 +57,7 @@ const closeSidebar = () => {
 
 const items = [
 	{ name: "Home", to: "/" },
-	{ name: "Features", to: "/" },
-	{ name: "Changelog", to: "/" },
+	{ name: "Features", to: "/features" },
+	{ name: "Changelog", to: "/changelog" },
 ];
 </script>

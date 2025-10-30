@@ -1,6 +1,6 @@
 <template>
-	<div class="bg-[#f6f6f6] w-full">
-		<div class="grid lg:grid-cols-2">
+	<main class="bg-[#f6f6f6] w-full">
+		<section class="grid lg:grid-cols-2">
 			<NuxtImg
 				src="/assets/img/login.png"
 				alt="Login image"
@@ -12,9 +12,9 @@
 			<div class="flex flex-col items-center pt-16 px-4 min-h-screen">
 				<Logo class="mb-32" />
 				<div class="flex flex-col items-center gap-4 max-w-lg">
-					<h1 class="heading text-center">
+					<h2 class="heading text-center">
 						Sign in
-					</h1>
+					</h2>
 					<span class="paragraph text-center">
 						Fill in your email and open your inbox. Click the link to get access.
 					</span>
@@ -47,8 +47,8 @@
 					</form>
 				</div>
 			</div>
-		</div>
-	</div>
+		</section>
+	</main>
 </template>
 
 <script lang="ts" setup>

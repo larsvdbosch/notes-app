@@ -1,25 +1,29 @@
 <template>
 	<article class="outer bg-[var(--color-accordion-background)] hover:bg-[var(--color-accordion-hover)] border border-[var(--color-accordion-border)] text-[var(--color-text)]">
 		<div class="transition-colors duration-[.25s] ease-out">
-			<button
-				id="accordion"
-				class="accordion"
-				:aria-expanded="isOpen"
-				aria-controls="accordion_answer"
-				@click="openAccordion"
-			>
-				<span class="accordion_heading">{{ title }}</span>
-				<Icon
-					name="my-icon:chevron-down"
-					alt="Chevron Down"
-					class="text-[var(--color-text)] chevron-icon"
-					:class="{ 'rotate-chevron': isOpen }"
-				/>
-			</button>
+			<h3>
+				<button
+					:id="buttonId"
+					class="accordion"
+					:aria-expanded="isOpen"
+					aria-controls="panelId"
+					@click="openAccordion"
+				>
+					<span class="accordion_heading">{{ title }}</span>
+					<Icon
+						name="my-icon:chevron-down"
+						class="text-[var(--color-text)] chevron-icon"
+						:aria-hidden="true"
+						:class="{ 'rotate-chevron': isOpen }"
+					/>
+				</button>
+			</h3>
 			<div
-				id="accordion_answer"
+				:id="panelId"
 				ref="accordionRef"
 				class="accordion_answer"
+				role="region"
+        		:aria-labelledby="buttonId"
 			>
 				<span
 					ref="textRef"
@@ -32,6 +36,11 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+
+//Unieke id's voor accessibility
+const uid = Math.random().toString(36).substring(2, 9);
+const buttonId = `accordion-btn-${uid}`;
+const panelId = `accordion-panel-${uid}`;
 
 // Refs die aan een HTML element worden gekoppeld
 const isOpen = ref(false);

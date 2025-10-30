@@ -11,7 +11,7 @@
 				<Button
 					:to="to"
 				>
-					{{ buttonText }}
+					{{ label }}
 				</Button>
 			</div>
 		</section>
@@ -22,7 +22,7 @@
 interface Props {
 	title: string;
 	description: string;
-	buttonText: string;
+	label: string;
 	to: string;
 }
 

@@ -33,6 +33,12 @@ body {
   background: #f92aae;
 }
 
+.fast-hover-state {
+  transition-property: background-color;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+}
+
 .active-state:active {
 	outline: solid 2px #165dfc;
 	outline-offset: 2px;
