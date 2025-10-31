@@ -9,14 +9,15 @@
 				{{ description }}
 			</p>
 		</div>
-		<NuxtImg
-			:src="`/assets/img/${imgSrc}.png`"
-			alt="Logo"
-			loading="lazy"
-			width="1920"
-			height="1080"
-			class="col-span-2 drop-shadow-lg rounded-2xl object-cover"
-		/>
+		<div class="col-span-2">
+			<NuxtImg
+				:src="`/assets/img/${imgSrc}.png`"
+				alt="USP Image"
+				loading="lazy"
+				format="webp"
+				class="drop-shadow-lg rounded-2xl object-cover w-full h-full"
+			/>
+		</div>
 	</div>
 </template>
 

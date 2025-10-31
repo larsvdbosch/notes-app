@@ -1,5 +1,5 @@
 <template>
-	<header class="sticky z-50 bg-[var(--color-background)]">
+	<header class="sticky top-0 z-50 bg-[var(--color-background)]">
 		<section class="h-[var(--height-navbar)] flex justify-between items-center p-4">
 			<Logo to="/" />
 			<Search />
@@ -12,21 +12,21 @@
 					label="github"
 				/>
 				<IconLink
-				v-if="darkMode"
+					v-if="darkMode"
 					icon="sun"
-					@click="toggleDarkmode"
 					label="sun"
+					@click="toggleDarkmode"
 				/>
 				<IconLink
-				v-else
+					v-else
 					icon="moon"
-					@click="toggleDarkmode"
 					label="moon"
+					@click="toggleDarkmode"
 				/>
 			</div>
 		</section>
 		<div
-			class="sticky z-30 bg-[var(--color-background)] top-[calc(var(--height-navbar)+var(--height-navbar)) border-y border-[var(--color-border)]"
+			class="top-0 z-30 bg-[var(--color-background)] top-[calc(var(--height-navbar)+var(--height-navbar)) border-y border-[var(--color-border)]"
 		>
 			<section class="h-[var(--height-navbar)] flex justify-between items-center p-4">
 				<button
@@ -44,6 +44,7 @@
 		</div>
 	</header>
 </template>
+
 <script setup lang="ts">
 const { toggle } = toggleSidebar();
 const { toggleDarkmode, darkMode } = useDarkmode();

@@ -1,10 +1,7 @@
-<script setup lang="ts">
-</script>
-
 <template>
-	<div>
+	<div class="flex flex-col min-h-screen">
 		<DashboardBanner />
-		<Navbar class="top-[var(--height-banner)]" />
+		<Navbar />
 		<main>
 			<slot />
 		</main>

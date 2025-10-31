@@ -6,66 +6,90 @@
 			label="Sign in"
 			to="/login"
 		/>
-			<section class="container padding-section flex justify-center px-4">
-				<ul class="flex flex-col text-[var(--color-text)] items-center gap-16">
-					<h2 class="heading max-w-3xl">
-						Why Notably?
-					</h2>
-					<li v-for="usp in usps"
-						:key="usp.id">
-						<USP
-							:tagline="usp.tagline"
-							:title="usp.title"
-							:description="usp.description"
-							:img-src="usp.imgSrc"
+		<section class="container padding-section flex justify-center px-4">
+			<ul class="flex flex-col text-[var(--color-text)] items-center gap-16">
+				<h2 class="heading max-w-3xl">
+					Why Notably?
+				</h2>
+				<li
+					v-for="usp in usps"
+					:key="usp.id"
+				>
+					<USP
+						:tagline="usp.tagline"
+						:title="usp.title"
+						:description="usp.description"
+						:img-src="usp.imgSrc"
+					/>
+				</li>
+			</ul>
+		</section>
+		<section class="container padding-section px-4">
+			<div class="flex flex-col items-center gap-16">
+				<h2 class="heading max-w-lg text-center text-[var(--color-text)]">
+					What people say about Notably
+				</h2>
+				<ul
+					class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+				>
+					<li
+						v-for="review in reviews"
+						:key="review.id"
+					>
+						<Review
+							:description="review.description"
+							:author="review.author"
+							:avatar="review.avatar"
 						/>
 					</li>
 				</ul>
-			</section>
-			<section class="container padding-section px-4">
-				<div class="flex flex-col items-center gap-16">
-					<h2 class="heading max-w-lg text-center text-[var(--color-text)]">
-						What people say about Notably
-					</h2>
-					<ul
-						class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+			</div>
+		</section>
+		<section class="container padding-section px-4">
+			<div class="flex flex-col items-center gap-16">
+				<h2 class="heading max-w-lg text-center text-[var(--color-text)]">
+					What is included in Notably?
+				</h2>
+				<ul
+					class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+				>
+					<li
+						v-for="card in cards"
+						:key="card.id"
 					>
-						<li
-							v-for="review in reviews"
-							:key="review.id"
-						>
-							<Review
-								:description="review.description"
-								:author="review.author"
-								:avatar="review.avatar"
-							/>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="container padding-section px-4">
-				<div class="flex flex-col items-center gap-16">
-					<h2 class="heading text-center text-[var(--color-text)]">
-						Frequently asked questions
-					</h2>
-					<ul class="flex flex-col gap-4">
-						<li
-							v-for="question in questions"
-							:key="question.id"
-						>
-							<Accordion
-								:title="question.title"
-								:description="question.description"
-							/>
-						</li>
-					</ul>
-				</div>
-			</section>
+						<GalleryCard
+							:title="card.title"
+							:description="card.description"
+							:img-src="card.imgSrc"
+						/>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="container padding-section px-4">
+			<div class="flex flex-col items-center gap-16">
+				<h2 class="heading text-center text-[var(--color-text)]">
+					Frequently asked questions
+				</h2>
+				<ul class="flex flex-col gap-4">
+					<li
+						v-for="question in questions"
+						:key="question.id"
+					>
+						<Accordion
+							:title="question.title"
+							:description="question.description"
+						/>
+					</li>
+				</ul>
+			</div>
+		</section>
 	</main>
 </template>
 
 <script lang="ts" setup>
 // Dit heeft dezelfde werking als data vanuit een backend ophalen. Alleen hier gebeurt alles op de front-end.
+
 const reviews = [{
 	id: 1,
 	description: "We’d tried every tool under the sun, but they all felt bloated or clunky. This app just clicked. Simple, fast, and actually enjoyable to use. Now our notes don’t just live in chaos—they live in one beautiful place.",
@@ -165,5 +189,42 @@ const usps = [{
 	title: "Faster than the others",
 	description: "Experience lightning-fast note-taking with our optimized app.",
 	imgSrc: "new-dashboard",
+}];
+
+const cards = [{
+	id: 1,
+	title: "Organize with tags",
+	description: "Easily categorize and find your notes using our intuitive tagging system.",
+	imgSrc: "dashboard",
+},
+{
+	id: 2,
+	title: "Rich text editing",
+	description: "Format your notes with bold, italics, lists, and more for better clarity.",
+	imgSrc: "new-dashboard",
+},
+{
+	id: 3,
+	title: "Cloud sync",
+	description: "Access your notes from any device with seamless cloud synchronization.",
+	imgSrc: "placeholder",
+},
+{
+	id: 4,
+	title: "Collaboration",
+	description: "Share notes and collaborate with others in real-time.",
+	imgSrc: "placeholder-white",
+},
+{
+	id: 5,
+	title: "Multimedia support",
+	description: "Enhance your notes with images, audio, and videos.",
+	imgSrc: "login",
+},
+{
+	id: 6,
+	title: "Powerful search",
+	description: "Quickly find any note with our advanced search functionality.",
+	imgSrc: "dashboard",
 }];
 </script>

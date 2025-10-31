@@ -34,7 +34,8 @@
 					v-for="item in items"
 					:key="item.name"
 					:to="item.to"
-					:name="item.name" />
+					:name="item.name"
+				/>
 			</li>
 		</ul>
 	</aside>

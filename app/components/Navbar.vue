@@ -1,5 +1,5 @@
 <template>
-	<header class="sticky z-30 bg-[var(--color-background)] border-b border-[var(--color-border)]">
+	<header class="sticky top-0 z-50 bg-[var(--color-background)] border-b border-[var(--color-border)]">
 		<section class="container h-[var(--height-navbar)] flex justify-between items-center p-4">
 			<Logo />
 			<div class="hidden lg:flex items-center gap-2">
@@ -25,16 +25,16 @@
 					label="github"
 				/>
 				<IconLink
-				v-if="darkMode"
+					v-if="darkMode"
 					icon="sun"
-					@click="toggleDarkmode"
 					label="sun"
+					@click="toggleDarkmode"
 				/>
 				<IconLink
-				v-else
+					v-else
 					icon="moon"
-					@click="toggleDarkmode"
 					label="moon"
+					@click="toggleDarkmode"
 				/>
 				<Offscreen />
 				<Button

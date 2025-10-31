@@ -1,5 +1,5 @@
 <template>
-	<section class="sticky top-0 z-50 bg-[var(--color-banner)] border-[var(--color-border)] border-b">
+	<section class="top-0 origin-top z-50 bg-[var(--color-banner)] border-[var(--color-border)] border-b">
 		<div
 			class="h-[var(--height-banner)] flex justify-center items-center p-4 w-full"
 		>
