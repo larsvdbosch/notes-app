@@ -1,230 +1,212 @@
-<template>
-	<main>
-		<Hero
-			title="The new note taking app you can’t miss out on"
-			description="Notably is a completely free website for writing down notes. Fast, secure, free."
-			label="Sign in"
-			to="/login"
-		/>
-		<section class="container padding-section flex justify-center px-4">
-			<ul class="flex flex-col text-[var(--color-text)] items-center gap-16">
-				<h2 class="heading max-w-3xl">
-					Why Notably?
-				</h2>
-				<li
-					v-for="usp in usps"
-					:key="usp.id"
-				>
-					<USP
-						:tagline="usp.tagline"
-						:title="usp.title"
-						:description="usp.description"
-						:img-src="usp.imgSrc"
-					/>
-				</li>
-			</ul>
-		</section>
-		<section class="container padding-section px-4">
-			<div class="flex flex-col items-center gap-16">
-				<h2 class="heading max-w-lg text-center text-[var(--color-text)]">
-					What people say about Notably
-				</h2>
-				<ul
-					class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-				>
-					<li
-						v-for="review in reviews"
-						:key="review.id"
-					>
-						<Review
-							:description="review.description"
-							:author="review.author"
-							:avatar="review.avatar"
-						/>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<section class="container padding-section px-4">
-			<div class="flex flex-col items-center gap-16">
-				<h2 class="heading max-w-lg text-center text-[var(--color-text)]">
-					What is included in Notably?
-				</h2>
-				<ul
-					class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-				>
-					<li
-						v-for="card in cards"
-						:key="card.id"
-					>
-						<GalleryCard
-							:title="card.title"
-							:description="card.description"
-							:img-src="card.imgSrc"
-						/>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<section class="container padding-section px-4">
-			<div class="flex flex-col items-center gap-16">
-				<h2 class="heading text-center text-[var(--color-text)]">
-					Frequently asked questions
-				</h2>
-				<ul class="flex flex-col gap-4">
-					<li
-						v-for="question in questions"
-						:key="question.id"
-					>
-						<Accordion
-							:title="question.title"
-							:description="question.description"
-						/>
-					</li>
-				</ul>
-			</div>
-		</section>
-	</main>
-</template>
-
 <script lang="ts" setup>
 // Dit heeft dezelfde werking als data vanuit een backend ophalen. Alleen hier gebeurt alles op de front-end.
-
 const reviews = [{
-	id: 1,
-	description: "We’d tried every tool under the sun, but they all felt bloated or clunky. This app just clicked. Simple, fast, and actually enjoyable to use. Now our notes don’t just live in chaos—they live in one beautiful place.",
-	author: "Lars van den Bosch",
-	avatar: "lars.png",
-},
-{
-	id: 2,
-	description: "Everything about it feels effortless. I open it, jot something down, and it’s already organized. No setup, no friction, just pure flow. It’s the first app that made note-taking feel natural again.",
-	author: "Lars van den Bosch",
-	avatar: "lars.png",
+  id: 1,
+  description: 'We’d tried every tool under the sun, but they all felt bloated or clunky. This app just clicked. Simple, fast, and actually enjoyable to use. Now our notes don’t just live in chaos—they live in one beautiful place.',
+  author: 'Lars van den Bosch',
+  avatar: 'lars.png',
+}, {
+  id: 2,
+  description: 'Everything about it feels effortless. I open it, jot something down, and it’s already organized. No setup, no friction, just pure flow. It’s the first app that made note-taking feel natural again.',
+  author: 'Lars van den Bosch',
+  avatar: 'lars.png',
 
-},
-{
-	id: 3,
-	description: "We used to waste hours syncing docs and messages across different platforms. Now everything—from meeting notes to project ideas—stays connected in one spot.",
-	author: "Lars van den Bosch",
-	avatar: "lars.png",
-},
-{
-	id: 4,
-	description: "I didn’t think a note app could be fun. But this one is. Clean design, intuitive features, and it just gets out of your way. I’ve gone from scattered sticky notes to a system that finally makes sense.",
-	author: "Lars van den Bosch",
-	avatar: "lars.png",
+}, {
+  id: 3,
+  description: 'We used to waste hours syncing docs and messages across different platforms. Now everything—from meeting notes to project ideas—stays connected in one spot.',
+  author: 'Lars van den Bosch',
+  avatar: 'lars.png',
+}, {
+  id: 4,
+  description: 'I didn’t think a note app could be fun. But this one is. Clean design, intuitive features, and it just gets out of your way. I’ve gone from scattered sticky notes to a system that finally makes sense.',
+  author: 'Lars van den Bosch',
+  avatar: 'lars.png',
 
-},
-{
-	id: 5,
-	description: "As a student, I’ve tried all the “productivity” apps out there. Most were overcomplicated or distracting. This one just works. My lectures, assignments, and ideas stay organized without me even thinking about it.",
-	author: "Lars van den Bosch",
-	avatar: "lars.png",
-},
-{
-	id: 6,
-	description: "I’m a designer, and I love tools that feel crafted with care. This app feels like it was made for people who care about their work. It’s elegant, fast, and actually inspires me to create more.",
-	author: "Lars van den Bosch",
-	avatar: "lars.png",
+}, {
+  id: 5,
+  description: 'As a student, I’ve tried all the “productivity” apps out there. Most were overcomplicated or distracting. This one just works. My lectures, assignments, and ideas stay organized without me even thinking about it.',
+  author: 'Lars van den Bosch',
+  avatar: 'lars.png',
+}, {
+  id: 6,
+  description: 'I’m a designer, and I love tools that feel crafted with care. This app feels like it was made for people who care about their work. It’s elegant, fast, and actually inspires me to create more.',
+  author: 'Lars van den Bosch',
+  avatar: 'lars.png',
 
-},
-{
-	id: 7,
-	description: "We switched from Notion after realizing we only used 10% of it. This app gave us everything we needed—no noise, no unnecessary features. It’s light, powerful, and perfect for our small team.",
-	author: "Lars van den Bosch",
-	avatar: "lars.png",
-},
-{
-	id: 8,
-	description: "Finally, a note-taking app that respects my time. I don’t have to dig through menus or remember shortcuts. I just write, and it stays organized automatically. It’s become my second brain.",
-	author: "Lars van den Bosch",
-	avatar: "lars.png",
+}, {
+  id: 7,
+  description: 'We switched from Notion after realizing we only used 10% of it. This app gave us everything we needed—no noise, no unnecessary features. It’s light, powerful, and perfect for our small team.',
+  author: 'Lars van den Bosch',
+  avatar: 'lars.png',
+}, {
+  id: 8,
+  description: 'Finally, a note-taking app that respects my time. I don’t have to dig through menus or remember shortcuts. I just write, and it stays organized automatically. It’s become my second brain.',
+  author: 'Lars van den Bosch',
+  avatar: 'lars.png',
 
-}];
+}]
 
 const questions = [{
-	id: 1,
-	title: "What is Notably?",
-	description: "Notably is a note-taking app that helps you organize your thoughts and ideas in a simple and intuitive way. With Notably, you can create, edit, and manage your notes effortlessly.",
-},
-{
-	id: 2,
-	title: "Is it completely free?",
-	description: "Notably is a note-taking app that helps you organize your thoughts and ideas in a simple and intuitive way. With Notably, you can create, edit, and manage your notes effortlessly.",
-},
-{
-	id: 3,
-	title: "Why is it better then Apple Notes for example?",
-	description: "Notably is a note-taking app that helps you organize your thoughts and ideas in a simple and intuitive way. With Notably, you can create, edit, and manage your notes effortlessly.",
-},
-{
-	id: 4,
-	title: "What are the features?",
-	description: "Notably is a note-taking app that helps you organize your thoughts and ideas in a simple and intuitive way. With Notably, you can create, edit, and manage your notes effortlessly.",
-},
-{
-	id: 5,
-	title: "Can I use it online and offline?",
-	description: "Notably is a note-taking app that helps you organize your thoughts and ideas in a simple and intuitive way. With Notably, you can create, edit, and manage your notes effortlessly.",
-}];
+  id: 1,
+  title: 'What is Notably?',
+  description: 'Notably is a note-taking app that helps you organize your thoughts and ideas in a simple and intuitive way. With Notably, you can create, edit, and manage your notes effortlessly.',
+}, {
+  id: 2,
+  title: 'Is it completely free?',
+  description: 'Notably is a note-taking app that helps you organize your thoughts and ideas in a simple and intuitive way. With Notably, you can create, edit, and manage your notes effortlessly.',
+}, {
+  id: 3,
+  title: 'Why is it better then Apple Notes for example?',
+  description: 'Notably is a note-taking app that helps you organize your thoughts and ideas in a simple and intuitive way. With Notably, you can create, edit, and manage your notes effortlessly.',
+}, {
+  id: 4,
+  title: 'What are the features?',
+  description: 'Notably is a note-taking app that helps you organize your thoughts and ideas in a simple and intuitive way. With Notably, you can create, edit, and manage your notes effortlessly.',
+}, {
+  id: 5,
+  title: 'Can I use it online and offline?',
+  description: 'Notably is a note-taking app that helps you organize your thoughts and ideas in a simple and intuitive way. With Notably, you can create, edit, and manage your notes effortlessly.',
+}]
 
 const usps = [{
-	id: 1,
-	tagline: "Online and offline",
-	title: "Write always and everywhere",
-	description: "The best note-taking experience, whether you're online or offline.",
-	imgSrc: "new-dashboard",
-},
-{
-	id: 2,
-	tagline: "Private and secure",
-	title: "Privacy is our priority",
-	description: "Your notes are safe with us. We never share your data.",
-	imgSrc: "new-dashboard",
-},
-{
-	id: 3,
-	tagline: "Fast and reliable",
-	title: "Faster than the others",
-	description: "Experience lightning-fast note-taking with our optimized app.",
-	imgSrc: "new-dashboard",
-}];
+  id: 1,
+  tagline: 'Online and offline',
+  title: 'Write always and everywhere',
+  description: 'The best note-taking experience, whether you\'re online or offline.',
+  imgSrc: 'new-dashboard',
+}, {
+  id: 2,
+  tagline: 'Private and secure',
+  title: 'Privacy is our priority',
+  description: 'Your notes are safe with us. We never share your data.',
+  imgSrc: 'new-dashboard',
+}, {
+  id: 3,
+  tagline: 'Fast and reliable',
+  title: 'Faster than the others',
+  description: 'Experience lightning-fast note-taking with our optimized app.',
+  imgSrc: 'new-dashboard',
+}]
 
 const cards = [{
-	id: 1,
-	title: "Organize with tags",
-	description: "Easily categorize and find your notes using our intuitive tagging system.",
-	imgSrc: "dashboard",
-},
-{
-	id: 2,
-	title: "Rich text editing",
-	description: "Format your notes with bold, italics, lists, and more for better clarity.",
-	imgSrc: "new-dashboard",
-},
-{
-	id: 3,
-	title: "Cloud sync",
-	description: "Access your notes from any device with seamless cloud synchronization.",
-	imgSrc: "placeholder",
-},
-{
-	id: 4,
-	title: "Collaboration",
-	description: "Share notes and collaborate with others in real-time.",
-	imgSrc: "placeholder-white",
-},
-{
-	id: 5,
-	title: "Multimedia support",
-	description: "Enhance your notes with images, audio, and videos.",
-	imgSrc: "login",
-},
-{
-	id: 6,
-	title: "Powerful search",
-	description: "Quickly find any note with our advanced search functionality.",
-	imgSrc: "dashboard",
-}];
+  id: 1,
+  title: 'Organize with tags',
+  description: 'Easily categorize and find your notes using our intuitive tagging system.',
+  imgSrc: 'dashboard',
+}, {
+  id: 2,
+  title: 'Rich text editing',
+  description: 'Format your notes with bold, italics, lists, and more for better clarity.',
+  imgSrc: 'new-dashboard',
+}, {
+  id: 3,
+  title: 'Cloud sync',
+  description: 'Access your notes from any device with seamless cloud synchronization.',
+  imgSrc: 'placeholder',
+}, {
+  id: 4,
+  title: 'Collaboration',
+  description: 'Share notes and collaborate with others in real-time.',
+  imgSrc: 'placeholder-white',
+}, {
+  id: 5,
+  title: 'Multimedia support',
+  description: 'Enhance your notes with images, audio, and videos.',
+  imgSrc: 'login',
+}, {
+  id: 6,
+  title: 'Powerful search',
+  description: 'Quickly find any note with our advanced search functionality.',
+  imgSrc: 'dashboard',
+}]
 </script>
+
+<template>
+  <main>
+    <Hero
+      title="The new note taking app you can’t miss out on"
+      description="Notably is a completely free website for writing down notes. Fast, secure, free."
+      label="Sign in"
+      to="/login"
+      :show-button="true"
+    />
+    <section class="container padding-section flex justify-center px-4">
+      <ul class="flex flex-col text-[var(--color-text)] items-center gap-16">
+        <h2 class="heading max-w-3xl">
+          Why Notably?
+        </h2>
+        <li
+          v-for="usp in usps"
+          :key="usp.id"
+        >
+          <USP
+            :tagline="usp.tagline"
+            :title="usp.title"
+            :description="usp.description"
+            :img-src="usp.imgSrc"
+          />
+        </li>
+      </ul>
+    </section>
+    <section class="container padding-section px-4">
+      <div class="flex flex-col items-center gap-16">
+        <h2 class="heading max-w-lg text-center text-[var(--color-text)]">
+          What people say about Notably
+        </h2>
+        <ul
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <li
+            v-for="review in reviews"
+            :key="review.id"
+          >
+            <Review
+              :description="review.description"
+              :author="review.author"
+              :avatar="review.avatar"
+            />
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="container padding-section px-4">
+      <div class="flex flex-col items-center gap-16">
+        <h2 class="heading max-w-lg text-center text-[var(--color-text)]">
+          What is included in Notably?
+        </h2>
+        <ul
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <li
+            v-for="card in cards"
+            :key="card.id"
+          >
+            <GalleryCard
+              :title="card.title"
+              :description="card.description"
+              :img-src="card.imgSrc"
+            />
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="container padding-section px-4">
+      <div class="flex flex-col items-center gap-16">
+        <h2 class="heading text-center text-[var(--color-text)]">
+          Frequently asked questions
+        </h2>
+        <ul class="flex flex-col gap-4">
+          <li
+            v-for="question in questions"
+            :key="question.id"
+          >
+            <Accordion
+              :title="question.title"
+              :description="question.description"
+            />
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</template>

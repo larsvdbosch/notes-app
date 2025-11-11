@@ -1,19 +1,19 @@
 <script setup lang="ts">
-const user = useSupabaseUser();
-const redirectInfo = useSupabaseCookieRedirect();
+const user = useSupabaseUser()
+const redirectInfo = useSupabaseCookieRedirect()
 
 watch(user, () => {
-	if (user.value) {
-		// Get redirect path, and clear it from the cookie
-		const path = redirectInfo.pluck();
-		// Redirect to the saved path, or fallback to home
-		return navigateTo(path || "/dashboard");
-	}
-}, { immediate: true });
+  if (user.value) {
+    // Get redirect path, and clear it from the cookie
+    const path = redirectInfo.pluck()
+    // Redirect to the saved path, or fallback to home
+    return navigateTo(path || '/dashboard')
+  }
+}, { immediate: true })
 </script>
 
 <template>
-	<main class="flex items-center justify-center padding-section">
-		<DashboardLoader />
-	</main>
+  <main class="flex items-center justify-center padding-section">
+    <DashboardLoader />
+  </main>
 </template>

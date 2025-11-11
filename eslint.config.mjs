@@ -1,8 +1,8 @@
-import withNuxt from "./.nuxt/eslint.config.mjs";
+// eslint.config.js
+import antfu from '@antfu/eslint-config'
 
-export default withNuxt(
-	{
-		rules: {
-			"vue/multi-word-component-names": "off" },
-	},
-);
+export default antfu({
+  rules: {
+    'no-console': 'off',
+  },
+})

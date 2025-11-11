@@ -1,8 +1,16 @@
+<script lang="ts" setup>
+const { initDarkmode } = useDarkmode()
+
+onMounted(() => {
+  initDarkmode()
+})
+</script>
+
 <template>
-	<div class="antialiased bg-[var(--color-background)]">
-		<NuxtLayout>
-			<NuxtRouteAnnouncer />
-			<NuxtPage />
-		</NuxtLayout>
-	</div>
+  <div class="antialiased">
+    <NuxtLayout>
+      <NuxtRouteAnnouncer />
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
